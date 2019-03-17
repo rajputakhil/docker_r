@@ -16,7 +16,11 @@ Verify
 
 3. From the docker window, run:
 
-    sudo docker run -d -p 8787:8787 -e PASSWORD=<password> --name rstudio rocker/rstudio # replace <password> with a password of your choice
+```s
+sudo docker run -d -p 8787:8787 -v $(pwd):/workspace -e PASSWORD=Sniggdha13 --name rstudio rocker/rstudio
+# replace <password> with a password of your choice
+# Folder sharing: To share files and folders between your ```docker``` image and your host OS you can use the ```-v``` option. This acts much like running ```RStudio``` in the working directory.
+```
 
 That will take a while to download.
 
